@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/trafficLightFragment">
+
+    <fragment
+        android:id="@+id/trafficLightFragment"
+        android:name="com.example.androidnavigation.TrafficLightFragment"
+        android:label="fragment_traffic_light"
+        tools:layout="@layout/fragment_traffic_light" >
+
+        <action
+            android:id="@+id/action_trafficLightFragment_to_greenLightFragment"
+            app:destination="@id/greenLightFragment" />
+        <action
+            android:id="@+id/action_trafficLightFragment_to_yellowLightFragment"
+            app:destination="@id/yellowLightFragment" />
+        <action
+            android:id="@+id/action_trafficLightFragment_to_redLightFragment"
+            app:destination="@id/redLightFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/greenLightFragment"
+        android:name="com.example.androidnavigation.GreenLightFragment"
+        android:label="fragment_green_light"
+        tools:layout="@layout/fragment_green_light" >
+
+        <argument
+            android:name="myArgs"
+            android:defaultValue="ApplicationAndroid"/>
+        <action
+            android:id="@+id/action_greenLightFragment_to_trafficLightFragment"
+            app:destination="@id/trafficLightFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/yellowLightFragment"
+        android:name="com.example.androidnavigation.YellowLightFragment"
+        android:label="fragment_yellow_light"
+        tools:layout="@layout/fragment_yellow_light" >
+
+        <argument
+            android:name="myArgs"
+            android:defaultValue="ApplicationAndroid"/>
+        <action
+            android:id="@+id/action_yellowLightFragment_to_trafficLightFragment"
+            app:destination="@id/trafficLightFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/redLightFragment"
+        android:name="com.example.androidnavigation.RedLightFragment"
+        android:label="fragment_red_light"
+        tools:layout="@layout/fragment_red_light" >
+
+        <argument
+            android:name="myArgs"
+            android:defaultValue="ApplicationAndroid"/>
+
+        <action
+            android:id="@+id/action_redLightFragment_to_trafficLightFragment"
+            app:destination="@id/trafficLightFragment" />
+
+
+    </fragment>
+</navigation>

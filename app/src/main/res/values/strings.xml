@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidNavigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yellowButtonText">Желтый</string>
+    <string name="redButtonText">Красный</string>
+    <string name="greenFragmentText">Движение разрешено!</string>
+    <string name="redFragmentText">Стой!</string>
+    <string name="yellowFragmentText">Внимание!</string>
+</resources>
